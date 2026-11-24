@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Puzzle Cam — by ahmed aloush</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <div id="stage">
+    <video id="webcam" playsinline autoplay muted></video>
+    <canvas id="sceneCanvas"></canvas>
+
+    <div class="hud-top">
+      <div class="brand">PUZZLE·CAM <small>hand-frame capture</small></div>
+      <div class="status-pill">
+        <span id="statusDot" class="status-dot"></span>
+        <span id="statusText">Detecting</span>
+      </div>
+    </div>
+    
+
+    <div id="progressBadge" class="progress-badge">
+      <span id="progressText">0 / 9 puzzles collected</span>
+    </div>
+
+    <div id="loadingOverlay">
+      <div class="loader-text" id="loaderText">Loading…</div>
+      <div class="loader-bar"></div>
+      <button type="button" id="loaderRetry" class="loader-retry hidden">Retry</button>
+    </div>
+
+    <div id="errorBanner"></div>
+  </div>
+
+  <aside id="gallery">
+    <section class="recording-panel" aria-label="Video recording">
+      <strong>Gameplay video</strong>
+      <button type="button" id="recordBtn" class="gallery-action-btn">Start recording (F)</button>
+      <div id="recordStatus" role="status" aria-live="polite">Press F to start. Press F again to stop and save.</div>
+      <small>Camera + puzzle, no audio. Saved into recordings/. No automatic recording.</small>
+      <a id="recordDownload" hidden>Download video</a>
+      <button id="recordRetry" type="button" class="gallery-action-btn" hidden>Retry saving to project</button>
+    </section>
+    <div class="gallery-head">
+      <span class="gallery-title">Photo strip</span>
+      <span class="gallery-count" id="galleryCount">0 / 3</span>
+    </div>
+
+    <div class="strip-complete-msg" id="stripCompleteMsg">
+      Strip complete! Download it or reset.
+    </div>
+
+    <div id="galleryStrip" class="gallery-strip">
+      <div class="gallery-empty" id="galleryEmpty">
+        Your saved<br/>photos appear here
+      </div>
+    </div>
+
+    <div class="gallery-actions">
+      <button type="button" id="downloadStripBtn" class="gallery-action-btn" disabled>Download strip</button>
+      <button type="button" id="resetAllBtn" class="gallery-action-btn gallery-action-btn--danger">Reset all</button>
+    </div>
+  </aside>
+
+</div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
