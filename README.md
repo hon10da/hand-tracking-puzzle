@@ -2,7 +2,7 @@
 
 A browser game where you solve a 3x3 picture puzzle with your hand in front of the webcam. No mouse or keyboard needed to play.
 
-**[Watch the demo video (MP4)](demo/hand-puzzle-demo.mp4)**
+**[Watch the demo video (MP4)](https://raw.githubusercontent.com/hon10da/hand-tracking-puzzle/main/demo/hand-puzzle-demo.mp4)**
 
 > Demo video: `demo/hand-puzzle-demo.mp4`. The panel on the right side of the video was added in post-production to explain the idea. It shows a schematic and clip-based metrics. It is not live telemetry from the app.
 
